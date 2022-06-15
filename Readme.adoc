@@ -15,4 +15,6 @@ Create the antora-playbook.yaml and run the demo playbook with
  docker run -u $(id -u) -v $PWD:/antora:Z --rm -t local/antora:custom antora-playbook-from-scratch.yml----
 ----
 
+
+
 WARNING: Make sure to use the custom image when running inside docker

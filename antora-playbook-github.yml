@@ -7,6 +7,10 @@ content:
       start_path: docs
       branches: [main]
       edit_url: true
+    - url: https://github.com/ltsallas/software-artifact-2
+      start_path: docs
+      branches: [ main ]
+      edit_url: true
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable

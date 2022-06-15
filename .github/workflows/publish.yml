@@ -12,10 +12,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - name: Install Antora and the Antora Lunr Extension
+      - name: Install Antora with Antora Lunr and Asciidoctor-kroki Extensions
         run: npm i antora @antora/lunr-extension asciidoctor-kroki
       - name: Generate Site
-        run: npx antora antora-playbook-github.yml
+        run: GIT_CREDENTIALS='https://'${{ secrets.TOKEN }}'github.com' npx antora antora-playbook-github.yml --stacktrace
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

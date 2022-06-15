@@ -1,0 +1,23 @@
+site:
+  title: My Software Artifacts Documentation
+  start_page: software-artifact-1::index.adoc
+content:
+  sources:
+    - url: https://${{secrets.TOKEN}}@github.com/ltsallas/software-artifact-demo
+      start_path: docs
+      branches: [main]
+      edit_url: true
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+asciidoc:
+  attributes:
+    kroki-fetch-diagram: true
+  extensions:
+      - asciidoctor-kroki
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
+      index_latest_only: true
+    - require: asciidoctor-kroki

@@ -1,14 +1,16 @@
 = Test project to demo antora
 
-Build docker image with `docker build -t local/antora:custom -f Dockerfile.custom`
+Build docker image with
 
+----
+$ docker build -t local/antora:custom -f Dockerfile.custom
+----
 
-Create an antora-playbook.yaml and build it with
+Create an antora playbook named `antora-playbook-from-scratch.yml` and build it with
 
 [source,bash]
 ----
-
-docker run -u $(id -u) -v $PWD:/antora:Z --rm -t local/antora:custom antora-playbook-from-scratch.yml
-
+$ docker run -u $(id -u) -v $PWD:/antora:Z --rm -t local/antora:custom antora-playbook-from-scratch.yml
 ----
+
 

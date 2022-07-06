@@ -19,7 +19,7 @@ ui:
 asciidoc:
   attributes:
     kroki-fetch-diagram: true
-    page-paginagion: true
+    page-pagination: true
   extensions:
       - asciidoctor-kroki
 antora:
